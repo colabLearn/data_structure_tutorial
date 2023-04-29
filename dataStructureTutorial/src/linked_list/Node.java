@@ -1,4 +1,4 @@
-package linked_list;
+package src.linked_list;
 
 /**
  * AC12001/AC22007 Lab 1 Starting files

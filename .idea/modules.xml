@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/learning-git.iml" filepath="$PROJECT_DIR$/.idea/learning-git.iml" />
       <module fileurl="file://$PROJECT_DIR$/learningGit/learningGit.iml" filepath="$PROJECT_DIR$/learningGit/learningGit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/learning_git.iml" filepath="$PROJECT_DIR$/.idea/learning_git.iml" />
     </modules>
   </component>
 </project>
