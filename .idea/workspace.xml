@@ -4,8 +4,7 @@
     <list default="true" id="9117c1f5-25a8-4fa9-9032-7ce19a93e596" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dataStructureTutorial/src/linked_list/Linked_List.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataStructureTutorial/src/linked_list/Linked_List.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataStructureTutorial/src/linked_list/ListIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataStructureTutorial/src/linked_list/ListIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataStructureTutorial/src/test/Linked_ListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dataStructureTutorial/src/test/Linked_ListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learning_git/src/linked_list/Linked_List.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learning_git/src/linked_list/Linked_List.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +14,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -49,13 +49,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="src.Stack" />
       <recent name="src.test" />
+      <recent name="src.Stack" />
       <recent name="linked_list" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Linked_ListTest.can_ListIterate">
-    <configuration name="Linked_ListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.StackTest.can_getStackSize">
+    <configuration name="StackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="learning_git" />
       <extension name="coverage">
         <pattern>
@@ -64,13 +64,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="src.test" />
-      <option name="MAIN_CLASS_NAME" value="src.test.Linked_ListTest" />
+      <option name="MAIN_CLASS_NAME" value="src.test.StackTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Linked_ListTest.can_ListIterate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StackTest.can_CheckIsEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="learning_git" />
       <extension name="coverage">
         <pattern>
@@ -79,14 +79,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="src.test" />
-      <option name="MAIN_CLASS_NAME" value="src.test.Linked_ListTest" />
-      <option name="METHOD_NAME" value="can_ListIterate" />
+      <option name="MAIN_CLASS_NAME" value="src.test.StackTest" />
+      <option name="METHOD_NAME" value="can_CheckIsEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NodeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StackTest.can_getStackSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="learning_git" />
       <extension name="coverage">
         <pattern>
@@ -95,8 +95,41 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="src.test" />
-      <option name="MAIN_CLASS_NAME" value="src.test.NodeTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="src.test.StackTest" />
+      <option name="METHOD_NAME" value="can_getStackSize" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StackTest.can_get_resetTop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="learning_git" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="src.test" />
+      <option name="MAIN_CLASS_NAME" value="src.test.StackTest" />
+      <option name="METHOD_NAME" value="can_get_resetTop" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StackTest.can_pushANDpop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="learning_git" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="src.test" />
+      <option name="MAIN_CLASS_NAME" value="src.test.StackTest" />
+      <option name="METHOD_NAME" value="can_pushANDpop" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -116,9 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Linked_ListTest.can_ListIterate" />
-        <item itemvalue="JUnit.NodeTest" />
-        <item itemvalue="JUnit.Linked_ListTest" />
+        <item itemvalue="JUnit.StackTest.can_getStackSize" />
+        <item itemvalue="JUnit.StackTest.can_get_resetTop" />
+        <item itemvalue="JUnit.StackTest.can_CheckIsEmpty" />
+        <item itemvalue="JUnit.StackTest.can_pushANDpop" />
+        <item itemvalue="JUnit.StackTest" />
       </list>
     </recent_temporary>
   </component>
@@ -130,7 +165,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682769544287</updated>
-      <workItem from="1682769545956" duration="7989000" />
+      <workItem from="1682769545956" duration="13006000" />
     </task>
     <servers />
   </component>

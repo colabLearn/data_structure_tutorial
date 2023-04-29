@@ -1,13 +1,28 @@
 package src.linked_list;
 
 
+import src.Stack.EmptyStackException;
+import src.Stack.EmptyStackExceptionEnum;
+import src.Stack.Stack;
+import src.Stack.StackOverflowException;
+
 import java.util.Iterator;
 import java.util.Spliterator;
 import java.util.function.Consumer;
 
-public class Linked_List<T> implements Iterable<T> {
+public class Linked_List<T> implements Iterable<T>, Stack<T> {
 
     private int length =  0;
+    private int size_limit = 10;
+
+    public int getLimit() {
+        return size_limit;
+    }
+
+    public void setLimit(int limit) {
+        this.size_limit= limit;
+    }
+
     private Node head; // used to hold a reference to an instance of a ListNode object
     // which will be the first item in the list, i.e. at the 'head'
     // of the list
@@ -120,6 +135,8 @@ public class Linked_List<T> implements Iterable<T> {
          * This method simply return the length/size of your LinkeList
          */
         return length;}
+
+
 
     public void addAt(T data, int pos){
         /*
@@ -283,6 +300,66 @@ public class Linked_List<T> implements Iterable<T> {
 
 
         }
+    }
+
+    @Override
+    public T peek() {
+        if(isEmpty()){
+            try{
+                throw  new EmptyStackException(EmptyStackExceptionEnum.peek);
+            }catch (EmptyStackException e){
+                throw  new RuntimeException(e);
+            }
+
+        }
+        return (T)this.getHead().getData();
+    }
+
+    @Override
+    public void push(T data) {
+        if(stackIsFull()){
+            try{
+                throw  new StackOverflowException();
+            }catch (StackOverflowException e){
+                throw  new RuntimeException(e);
+            }
+        }else {
+            this.addFirst((T) data);
+        }
+    }
+
+    @Override
+    public T pop() {
+        T temp;
+        if(isEmpty()) {
+            try {
+                throw new EmptyStackException(EmptyStackExceptionEnum.pop);
+            } catch (EmptyStackException e) {
+                throw new RuntimeException(e);
+            }
+        }else {
+            temp = (T) this.getHead().getData();
+            this.removeFirst();
+        }
+        return temp;
+    }
+
+    @Override
+    public boolean stackIsFull() {
+        return this.size()==this.size_limit;
+    }
+
+    @Override
+    public void setLimi(int limit) {
+        this.size_limit=limit;
+    }
+
+    @Override
+    public void printStack() {
+        this.forEach(data-> {
+            System.out.println(data);
+        });
+
     }
 
     public boolean isEmpty(){
