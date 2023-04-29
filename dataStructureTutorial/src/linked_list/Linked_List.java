@@ -1,6 +1,11 @@
 package src.linked_list;
 
-public class Linked_List<T>{
+
+import java.util.Iterator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
+
+public class Linked_List<T> implements Iterable<T> {
 
     private int length =  0;
     private Node head; // used to hold a reference to an instance of a ListNode object
@@ -280,7 +285,6 @@ public class Linked_List<T>{
         }
     }
 
-
     public boolean isEmpty(){
 
         return head==null;
@@ -294,4 +298,18 @@ public class Linked_List<T>{
     }
 
 
+    @Override
+    public Iterator<T> iterator() {
+        return new ListIterator<T>(this);
+    }
+
+    @Override
+    public void forEach(Consumer<? super T> action) {
+        Iterable.super.forEach(action);
+    }
+
+    @Override
+    public Spliterator<T> spliterator() {
+        return Iterable.super.spliterator();
+    }
 }

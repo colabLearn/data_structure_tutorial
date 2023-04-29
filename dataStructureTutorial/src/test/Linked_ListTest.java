@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Test;
 import src.linked_list.Linked_List;
 import src.linked_list.Node;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 import static org.assertj.core.api.Assertions.*;
 
 class Linked_ListTest {
@@ -153,6 +156,25 @@ class Linked_ListTest {
 
         assertThat(linkedListUnderTest.isEmpty()).isTrue();
 
+    }
+
+    @Test
+    void can_ListIterate(){
+        Linked_List<Integer> linkedListUnderTest = new Linked_List<>();
+        linkedListUnderTest.addLast(250);
+        linkedListUnderTest.addLast(320);
+        linkedListUnderTest.addLast(80);
+        linkedListUnderTest.addLast(440);
+
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(output));
+        linkedListUnderTest.forEach(data -> {
+            System.out.println(data);
+        });
+        assertThat(output.toString()).contains("250")
+                .contains("320")
+                .contains("80")
+                .contains("440");
 
     }
 
