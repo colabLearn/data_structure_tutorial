@@ -1,4 +1,4 @@
-package src.Stack;
+package src.stack;
 
 public interface Stack <T> {
 
@@ -15,7 +15,7 @@ public interface Stack <T> {
 
     boolean stackIsFull();
 
-    void setLimi(int limit);
+    void increaseSize(int limit);
 
     void printStack();
 

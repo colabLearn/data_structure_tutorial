@@ -1,7 +1,7 @@
 package src.test;
 
 import org.junit.jupiter.api.Test;
-import src.Stack.Stack;
+import src.stack.Stack;
 import src.linked_list.Linked_List;
 
 

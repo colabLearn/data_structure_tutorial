@@ -1,16 +1,17 @@
 package src.linked_list;
 
 
-import src.Stack.EmptyStackException;
-import src.Stack.EmptyStackExceptionEnum;
-import src.Stack.Stack;
-import src.Stack.StackOverflowException;
+import src.queue.Queue;
+import src.stack.EmptyStackException;
+import src.stack.EmptyStackExceptionEnum;
+import src.stack.Stack;
+import src.stack.StackOverflowException;
 
 import java.util.Iterator;
 import java.util.Spliterator;
 import java.util.function.Consumer;
 
-public class Linked_List<T> implements Iterable<T>, Stack<T> {
+public class Linked_List<T> implements Iterable<T>, Stack<T>, Queue<T> {
 
     private int length =  0;
     private int size_limit = 10;
@@ -350,9 +351,11 @@ public class Linked_List<T> implements Iterable<T>, Stack<T> {
     }
 
     @Override
-    public void setLimi(int limit) {
-        this.size_limit=limit;
+    public void increaseSize(int limit) {
+        setLimit(limit);
     }
+
+
 
     @Override
     public void printStack() {
@@ -366,6 +369,12 @@ public class Linked_List<T> implements Iterable<T>, Stack<T> {
 
         return head==null;
     }
+
+    @Override
+    public boolean fullQueue() {
+        return this.size()==size_limit;
+    }
+
 
     @Override
     public String toString() {
@@ -388,5 +397,27 @@ public class Linked_List<T> implements Iterable<T>, Stack<T> {
     @Override
     public Spliterator<T> spliterator() {
         return Iterable.super.spliterator();
+    }
+
+    @Override
+    public void enqueue(T data) {
+        this.addLast(data);
+    }
+
+    @Override
+    public T dequeue() {
+        Node temp = this.getHead();
+        while(temp.getData()==null){
+            temp = temp.getNext();
+        }
+        T data = (T) temp.getData();
+        temp.setData(null);
+
+        return data;
+    }
+
+    @Override
+    public void printInfo() {
+
     }
 }

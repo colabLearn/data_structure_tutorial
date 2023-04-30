@@ -1,4 +1,4 @@
-package src.Stack;
+package src.stack;
 
 /**
  * Example class to demonstrate creating your own exception handling class.
